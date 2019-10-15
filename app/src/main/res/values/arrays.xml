@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="colorspinner">
+        <item>笔为黑色</item>
+        <item>笔为黄色</item>
+        <item>笔为蓝色</item>
+        <item>笔为红色</item>
+        <item>笔为绿色</item>
+    </string-array>
+    <string-array name="erasewidth">
+        <item>小橡皮擦</item>
+        <item>中等橡皮擦</item>
+        <item>大橡皮擦</item>
+        <item>巨大橡皮擦</item>
+    </string-array>
+    <string-array name="penwidth">
+        <item>极细笔</item>
+        <item>普通笔</item>
+        <item>粗笔</item>
+        <item>涂鸦笔</item>
+    </string-array>
+</resources>

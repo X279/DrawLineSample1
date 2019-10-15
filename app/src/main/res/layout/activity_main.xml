@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:gravity="top"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/erase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_select"
+            android:text="erase" />
+
+        <Button
+            android:id="@+id/pen"
+            android:layout_width="77dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/button_select"
+            android:text="pen" />
+
+        <Button
+            android:id="@+id/clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_select"
+            android:text="clear" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="155dp"
+            android:layout_height="43dp"
+            android:entries="@array/colorspinner" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/erasespinner"
+            android:layout_width="205dp"
+            android:layout_height="match_parent"
+            android:entries="@array/erasewidth" />
+
+        <Spinner
+            android:id="@+id/penspinner"
+            android:layout_width="205dp"
+            android:layout_height="match_parent"
+            android:entries="@array/penwidth"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:gravity="top"
+        android:orientation="vertical">
+
+        <com.example.drawlinesample.TestView
+            android:id="@+id/paintview"
+            android:layout_width="match_parent"
+            android:layout_height="627dp" />
+    </LinearLayout>
+</LinearLayout>
