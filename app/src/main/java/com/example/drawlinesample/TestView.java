@@ -42,11 +42,13 @@ public class TestView extends View {
         canvas = new Canvas();
         canvas.setBitmap(bitmap);
         canvas.drawColor(Color.WHITE);
+        //设置笔的属性
         pen = new Paint(Paint.DITHER_FLAG);
         pen.setAntiAlias(true);
         pen.setColor(Color.RED);
         pen.setStrokeCap(Paint.Cap.ROUND);
         pen.setStrokeWidth(8);
+        //设置橡皮属性
         erase = new Paint(Paint.DITHER_FLAG);
         erase.setAntiAlias(true);
         erase.setColor(Color.WHITE);
@@ -54,11 +56,13 @@ public class TestView extends View {
         erase.setStrokeWidth(16);
     }
 
+    //设置当前模式（绘画或是擦除）
     public void setMode(int mode)
     {
         this.mode = mode;
     }
 
+    //获取当前的Paint为笔或者是橡皮
     private Paint getPen(){
         if(mode == 0)
             return pen;
@@ -66,6 +70,7 @@ public class TestView extends View {
             return erase;
     }
 
+    //清空画布
     public void clearPaint()
     {
         bitmap = Bitmap.createBitmap(1800,2000,Bitmap.Config.ARGB_8888);
@@ -73,16 +78,19 @@ public class TestView extends View {
         canvas.drawColor(Color.WHITE);
         invalidate();
     }
+    //设置笔的颜色
     public void setPenColor(int color)
     {
         pen.setColor(color);
     }
 
+    //设置笔的粗细
     public void setPenWidth(float w)
     {
         pen.setStrokeWidth(w);
     }
 
+    //设置橡皮大小
     public void setEraseWidth(float w)
     {
         erase.setStrokeWidth(w);
