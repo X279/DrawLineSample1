@@ -11,17 +11,18 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 public class DrawLineSample extends Activity {
-    Button erase;
-    Spinner spinner;
-    Spinner erasespinner;
-    Spinner penspinner;
-    Button pen;
-    Button clear;
-    TestView testView;
+    Button erase; //橡皮
+    Spinner spinner; //笔颜色的下拉框
+    Spinner erasespinner; //橡皮大小的下拉框
+    Spinner penspinner; //笔粗细的下拉框
+    Button pen; //笔
+    Button clear; //清空
+    TestView testView; //画布
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //从xml获取
         pen = findViewById(R.id.pen);
         clear = findViewById(R.id.clear);
         erase = findViewById(R.id.erase);
@@ -30,19 +31,19 @@ public class DrawLineSample extends Activity {
             @Override
             public void onClick(View v) {
                 Log.i("eraseTag","切换为橡皮擦");
-                testView.setMode(1);
+                testView.setMode(1); //画布切换为擦除模式
             }
         });
         pen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                testView.setMode(0);
+                testView.setMode(0); //画布切换为绘画模式
             }
         });
         clear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                testView.clearPaint();
+                testView.clearPaint(); //清空画布
             }
         });
         spinner = findViewById(R.id.spinner);
